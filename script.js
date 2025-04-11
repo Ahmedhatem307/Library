@@ -1,6 +1,7 @@
 const myLibrary = [];
 
 function Book(title, author, pageCount, year, genre, read) {
+    this.id = crypto.randomUUID();
     this.title = title;
     this.author = author;
     this.pageCount = pageCount;
@@ -20,27 +21,13 @@ function displayLibrary() {
     });
 }
 
-addBookToLibrary("The Hobbit","J.R.R Tolkien", 300, 1937,"Fantasy", "not read");
+addBookToLibrary("The Hobbit","J.R.R Tolkien", 300, 1937,"Fantasy", false);
 addBookToLibrary("Harry Potter and the Philosopher's stone"
-    , "J.K. Rowling", 223,1997,"Fantasy", "read")
-addBookToLibrary("Pride and Prejudice", "Jane Austin", 448, 1813, "Romance", "read")
+    , "J.K. Rowling", 223,1997,"Fantasy", true)
+addBookToLibrary("Pride and Prejudice", "Jane Austin", 448, 1813, "Romance", false)
 
 displayLibrary();
 
 
-window.onload = function () {
-  const dialog = document.querySelector("dialog");
-  const showButton = document.querySelector("dialog + button");
-  const closeButton = document.querySelector("dialog button");
 
-  // "Show the dialog" button opens the dialog modally
-  showButton.addEventListener("click", () => {
-    dialog.showModal();
-  });
-
-  // "Close" button closes the dialog
-  closeButton.addEventListener("click", () => {
-    dialog.close();
-  });
-}
 
