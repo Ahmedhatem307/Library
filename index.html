@@ -21,7 +21,7 @@
             </div>
             <div>
                 <label for="pageCount">Page Count</label>
-                <input type="text" id="pageCount" , name="pageCount">
+                <input type="number" id="pageCount" , name="pageCount">
             </div>
             <div>
                 <label for="year">Year</label>
@@ -43,15 +43,25 @@
                         <input type="radio" id="no" , name="read">
                     </label>
                 </div>
-                
-                
             </div>
-
+            <button type="submit">Add</button>
+            <button type="reset">reset</button>
         </form>
         <button id="closeDialog">Close</button>
     </dialog>
 
-    <button id="openDialog">New Book</button>
+    <div class="container">
+        <div class="books">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="add">
+            <button id="openDialog">New Book</button>
+        </div>
+        
+    </div>
+
 
     <script>
         const dialog = document.getElementById('addNewBook');

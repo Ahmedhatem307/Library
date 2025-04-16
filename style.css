@@ -1,0 +1,37 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+}
+.books{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex: 3;
+}
+.books div{
+    width: 200px;
+    height: 300px;
+    text-align: center;
+}
+.add{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.add button{
+    height: 50px;
+    width: 100px;
+}
